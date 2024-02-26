@@ -1,0 +1,14 @@
+{
+  "name": "use-pagination",
+  "version": "1.0.0",
+  "description": "hook for pagination",
+  "main": "src/index.tsx",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
