@@ -86,7 +86,7 @@ const usePagination = ({
   };
 
   const handlePageChange = (page: number) => {
-    setCurrentPage(page);
+    setCurrentPage(page as number);
   };
 
   const nextPage = () => {

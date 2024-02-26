@@ -9,15 +9,13 @@ function App() {
       hiddenBoundary: true,
     });
 
-  console.log(range);
-
   return (
     <div>
       <p>Current Page: {currentPage}</p>
       <div>
         <button onClick={prevPage}>Previous</button>
         {range.map((page, i) => {
-          if (page === "...") return <button key={i}>...</button>;
+          if (typeof page === "string") return <button key={i}>...</button>;
           else
             return (
               <button
