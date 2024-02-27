@@ -2,22 +2,51 @@
   <img  src="./banner.png">
 </div>
 
-<h2 align="center">use Pagination pull | Hook </h1>
+<h2 align="center">use Hook Pagination pull | Hook </h1>
 
 [![npm](https://img.shields.io/npm/v/use-pagination-pull.svg?style=flat-square)](https://www.npmjs.com/package/use-pagination-pull)
 
 <p align="center">
     The usePagination hook is a custom hook to handle pagination in React applications.
-<p>
+    With it, you can generate a pagination sequence and navigate between pages.
+   
+</p>
 
- <h2 align="center" id="stacks-utilizadas">Stacks utilizadas</h2>
+ <h2 align="center" id="stacks-utilizadas">Documentation storybook</h2>
+
+<p align="center">
+    <a  style="text-align: center; font-weight: bold; font-size: 18px" href="https://65de0e043d606805aeba4797--glowing-alfajores-c9ed2e.netlify.app/?path=/docs/hooks-usepagination--docs">
+    storybook
+ </a>
+</p>
+
+ <h2 align="center" id="stacks-utilizadas">Stacks</h2>
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=git,ts,react,figma,jest" />
   </a>
 </p>
 
-## Uso
+## Using hook
+
+```typescript
+const { currentPage, handlePageChange, nextPage, prevPage, range } =
+  usePagination({
+    initialPage: 1,
+    totalPages: 20,
+  });
+
+// output;
+// range => [1, '...', 3, 4, 5, '...', 20]
+
+ handlePageChange(3)
+
+// currentPage => 3
+// range => [1, '...', 2, 3, 4, '...', 20]
+
+```
+
+## Example in React component
 
 ```typescript
 import usePagination from "use-pagination";
@@ -49,7 +78,7 @@ const { currentPage, handlePageChange, nextPage, prevPage, range } =
     );
   })}
   <button onClick={nextPage}>Next</button>
-</div>
+</div>;
 ```
 
 
@@ -71,13 +100,12 @@ This is a hook created with Rollup.
 
 [![npm](https://img.shields.io/npm/v/use-pagination-pull.svg?style=flat-square)](https://www.npmjs.com/package/use-pagination-pull)
 
-## Changelog and Roadmap 
-- [X] Initial release 
-- [X] Documentation
-- [X] Testing
-- UI
-- [] Create component for render the pagination styled 
+## Changelog and Roadmap
 
+
+- [x] Documentation
+- [x] Testing
+- [x] Initial release
 
 ## Development
 

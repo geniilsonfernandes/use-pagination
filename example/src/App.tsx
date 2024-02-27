@@ -8,7 +8,7 @@ function App() {
   const { currentPage, handlePageChange, nextPage, prevPage, range } =
     usePagination({
       initialPage: 1,
-      totalPages: 20,
+      totalPages: 6,
     });
   const markdown = `
     # Use Pagination pull
