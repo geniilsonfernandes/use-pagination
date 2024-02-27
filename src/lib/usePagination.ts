@@ -101,7 +101,6 @@ const usePagination = ({
       for (let i = leftBoundary; i <= rightBoundary; i++) {
         range.push(i);
       }
-      //
       if (rightBoundary < totalPages) {
         if (rightBoundary < totalPages - 1) {
           range.push(boundary);

@@ -6,7 +6,7 @@
   "description": "A personalised pagination hook",
   "license": "MIT",
   "scripts": {
-    "dev": "rollup -c --watch",
+    "dev": "cd example && npm run dev",
     "build": "rollup -c ./scripts/rollup.config.js",
     "test": "jest --watchAll --verbose",
     "storybook": "storybook dev -p 6006",
