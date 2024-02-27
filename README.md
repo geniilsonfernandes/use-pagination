@@ -94,14 +94,13 @@ const { currentPage, handlePageChange, nextPage, prevPage, range } =
 | modeInfinite   | bool   | The infinite mode         |
 | hiddenBoundary | bool   | The hidden boundary       |
 
-## Packages Status [85% 🔃]
+## Packages Status [100% 🔃]
 
 This is a hook created with Rollup.
 
 [![npm](https://img.shields.io/npm/v/use-pagination-pull.svg?style=flat-square)](https://www.npmjs.com/package/use-pagination-pull)
 
 ## Changelog and Roadmap
-
 
 - [x] Documentation
 - [x] Testing
