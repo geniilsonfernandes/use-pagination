@@ -1,6 +1,6 @@
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
-
+import Pagination from "../../src/lib/Pagination";
 import "./App.css";
 import usePagination from "./hook/usePagination";
 
@@ -59,6 +59,10 @@ function App() {
           The usePagination hook is a custom hook to handle pagination in React
           applications.
         </p>
+      </div>
+      <div className="reset">
+
+      <Pagination />
       </div>
       <div className="content">
         <div className="pagination">
