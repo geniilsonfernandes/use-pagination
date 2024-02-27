@@ -24,5 +24,8 @@ TestResults.xml
 #dist
 /dist
 
-#node
+#folders
 /node_modules
+
+
+
