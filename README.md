@@ -52,7 +52,9 @@ const { currentPage, handlePageChange, nextPage, prevPage, range } =
 </div>
 ```
 
-## Props
+
+
+## Props | hook usePagination
 
 | Props          | Type   | Description               |
 | -------------- | ------ | ------------------------- |
@@ -63,11 +65,19 @@ const { currentPage, handlePageChange, nextPage, prevPage, range } =
 | modeInfinite   | bool   | The infinite mode         |
 | hiddenBoundary | bool   | The hidden boundary       |
 
-## Packages
+## Packages Status [85% 🔃]
 
 This is a hook created with Rollup.
 
 [![npm](https://img.shields.io/npm/v/use-pagination-pull.svg?style=flat-square)](https://www.npmjs.com/package/use-pagination-pull)
+
+## Changelog and Roadmap 
+- [X] Initial release 
+- [X] Documentation
+- [X] Testing
+- UI
+- [] Create component for render the pagination styled 
+
 
 ## Development
 

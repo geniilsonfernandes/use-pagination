@@ -1,7 +1,8 @@
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
-import usePagination from "../../src/index";
+
 import "./App.css";
+import usePagination from "./hook/usePagination";
 
 function App() {
   const { currentPage, handlePageChange, nextPage, prevPage, range } =
