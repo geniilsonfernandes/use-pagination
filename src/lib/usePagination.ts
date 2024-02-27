@@ -13,7 +13,7 @@ type Range = number | string;
 
 const usePagination = ({
   totalPages,
-  initialPage,
+  initialPage = 1,
   onPageChange,
   modeInfinite = false,
   hiddenBoundary = false,
@@ -49,34 +49,6 @@ const usePagination = ({
         range.push(currentPage);
         range.push(currentPage + 1);
       }
-
-      return range;
-    }
-
-    if (totalPages <= 5) {
-      for (let i = 1; i <= totalPages; i++) {
-        range.push(i);
-      }
-      return range;
-    }
-
-    if (currentPage <= 3) {
-      for (let i = 1; i <= 3; i++) {
-        range.push(i);
-      }
-
-      range.push(boundary);
-      range.push(totalPages);
-      return range;
-    }
-
-    if (currentPage >= totalPages - 2) {
-      range.push(1);
-      range.push(boundary);
-      for (let i = 1; i <= 2; i++) {
-        range.push(totalPages - 3 + i);
-      }
-      range.push(totalPages);
 
       return range;
     }

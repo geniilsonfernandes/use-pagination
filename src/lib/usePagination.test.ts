@@ -11,7 +11,7 @@ describe("usePagination", () => {
       })
     );
 
-    expect(result.current.range).toEqual([1, 2, 3, "...", 10]);
+    expect(result.current.range).toEqual([1, 2, 3, 4, 5, "...", 10]);
   });
 
   it("should change page correctly", () => {
@@ -44,13 +44,13 @@ describe("usePagination", () => {
       })
     );
 
-    expect(result.current.range).toEqual([1, 2, 3, "...", 10]);
+    expect(result.current.range).toEqual([1, 2, 3, 4, 5, "...", 10]);
 
     act(() => {
       result.current.handlePageChange(9);
     });
 
-    expect(result.current.range).toEqual([1, "...", 8, 9, 10]);
+    expect(result.current.range).toEqual([1, "...", 6, 7, 8, 9, 10]);
   });
 
   it("should handle modeInfinite correctly", () => {
@@ -81,12 +81,27 @@ describe("usePagination", () => {
       })
     );
 
-    expect(result.current.range).toEqual([1, 2, 3, 10]);
+    expect(result.current.range).toEqual([1, 2, 3, 4, 10]);
 
     act(() => {
       result.current.handlePageChange(9);
     });
 
-    expect(result.current.range).toEqual([1, 8, 9, 10]);
+    expect(result.current.range).toEqual([1, 7, 8, 9, 10]);
+  });
+  it("should set initial page to be 10", () => {
+    const { result } = renderHook(() =>
+      usePagination({
+        totalPages: 100,
+        initialPage: 10,
+        boundary: "...",
+        hiddenBoundary: true,
+      })
+    );
+
+    expect(result.current.currentPage).toBe(10);
+    console.log(result.current.range);
+
+    expect(result.current.range).toEqual([1, 9, 10, 11, 100]);
   });
 });

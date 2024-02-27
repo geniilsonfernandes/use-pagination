@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,7 +25,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+ 
   min-width: 320px;
   min-height: 100vh;
 }
@@ -40,22 +40,30 @@ h1 {
   gap: 0.5rem;
 }
 
-.page{
+.page {
   width: 48px;
   height: 48px;
-  text-align: center;
+
   line-height: 30px;
+  border-radius: 24px;
   cursor: pointer;
   font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ffffff;
+  color: #1a1a1a;
 }
 
-:disabled{
+.page.active {
+  background: #1a1a1a;
+  box-shadow: 0px 7px 27px -11px rgba(26, 26, 26, 0.46);
+  color: #ffffff;
+}
+
+:disabled {
   cursor: not-allowed;
   color: #ffffff;
-  background: rgba(19, 33, 235, 0.411);
 }
 
 button {
@@ -70,7 +78,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background: #1a1a1a21;
 }
 button:focus,
 button:focus-visible {
